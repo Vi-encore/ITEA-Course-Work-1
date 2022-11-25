@@ -1,0 +1,35 @@
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: $between;
+  font-size: $fz-s;
+
+  &__item {
+    padding: $pd-0 $pd-10;
+    @include transition;
+  }
+  
+  &__item:hover {
+    font-weight: $f-700;
+    /*@include shadow-text;*/
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: $white;
+    
+  }
+
+  @media screen and (max-width: $l) {
+    font-size: $fz-xs;
+  }
+
+  @media screen and (max-width: $m) {
+     
+
+    &__item {
+      padding: $pd-5 $pd-0;
+      font-size: $fz-xs;
+    }
+  }
+}

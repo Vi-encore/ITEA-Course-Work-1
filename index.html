@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finsweet</title>
+    <link rel="icon" href="img/fav-icon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sen:regular,700,800"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      
+        <div class="header__logo">
+          <a class="header__link" href="#"
+            ><picture class="header__picture">
+              <source
+                srcset="img/main-logo-s.png"
+                type="image/png"
+                media="(max-width: 680px)"
+              />
+              <img
+                class="header__image"
+                src="img/main-logo.png"
+                alt="Main logo"
+              /> </picture
+          ></a>
+        </div>
+        <div class="header__nav">
+          <nav class="header__menu">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Home</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">About us</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="#" class="header__btn header__btn--fullscreen">
+            Subscribe
+          </a>
+        </div>
+        <div class="header__hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <div class="header__menu--mobile">
+            <ul class="menu--mobile">
+              <li class="menu__item">
+                <a href="#home" class="menu__link">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#banner" class="menu__link">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a href="#about_us" class="menu__link">About us</a>
+              </li>
+              <li class="menu__item">
+                <a href="#blog" class="menu__link">Contact us</a>
+              </li>
+            </ul>
+
+            <a href="#" class="header__btn">Subscribe</a>
+          </div>
+        </div>
+      
+    </header>
+
+    <script>
+      function toggleMobileMenu(menu) {
+        menu.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

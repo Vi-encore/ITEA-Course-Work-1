@@ -1,0 +1,70 @@
+.header {
+  background-color: $primary-color;
+  padding: $pd-1 $pd-5-pc;
+  @include flex-between;
+
+  &__nav {
+    @include flex-between;
+    width: auto;
+  }
+
+  &__btn {
+    margin-left: $pd-10;
+    @include btn($fz-standart, $white, $primary-color, $fz-s, $fz-xl);
+    font-weight: $f-700;
+    @include transition;
+  }
+
+  &__btn:hover {
+    @include btn-hover($yellow, $primary-color, $f-700);
+  }
+
+  &__btn:active {
+    background-color: $yellow-active;
+  }
+
+  &__hamburger-icon {
+    display: none;
+    flex-direction: column;
+  }
+
+  &__menu--mobile {
+    display: none;
+    position: absolute;
+    width: $w-100;
+    left: 0;
+    top: 60px;
+    margin: $pd-20 $pd-0;
+    padding-bottom: $pd-20;
+    background-color: $menu-bg;
+  }
+
+  .open &__menu--mobile {
+    margin: $pd-0;
+    display: flex;
+    flex-direction: column;
+    align-items: $center;
+    justify-content: $start;
+  }
+
+  @media screen and (max-width: $l) {
+    &__btn {
+      padding: $fz-xs $fz-m;
+    }
+  }
+
+  @media screen and (max-width: $m) {
+    &__menu,
+    &__btn--fullscreen {
+      display: none;
+    }
+
+    &__hamburger-icon {
+      display: block;
+    }
+
+    &__btn {
+      font-size: $fz-xs;
+    }
+  }
+}

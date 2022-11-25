@@ -1,0 +1,173 @@
+/*colors*/
+/*fonts*/
+/*padding,margin,etc*/
+/*padding,margin,etc in em*/
+/*padding,margin,etc in px*/
+/*padding,margin,etc in %*/
+/*width*/
+/*font-weight*/
+/*line-height*/
+/*font-size*/
+/*justify,align*/
+/*breakpoints*/
+/*arrow etc*/
+/*>*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: #e5e5e5;
+  color: #232536;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.container {
+  padding: 1em 5%;
+}
+
+/*@mixin shadow {
+  box-shadow: 4px 4px 10px $shadow-light;
+}*/
+/*@mixin shadow-text {
+  text-shadow: 5px 5px 10px $shadow-light;
+}*/
+.header {
+  background-color: #232536;
+  padding: 1em 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+}
+.header__btn {
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #232536;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: 700;
+  transition: all 150ms ease-in-out;
+}
+.header__btn:hover {
+  background-color: #ffd050;
+  color: #232536;
+  font-weight: 700;
+}
+.header__btn:active {
+  background-color: #fcc121;
+}
+.header__hamburger-icon {
+  display: none;
+  flex-direction: column;
+}
+.header__menu--mobile {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  background-color: #212330;
+}
+.open .header__menu--mobile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 992px) {
+  .header__btn {
+    padding: 14px 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header__menu, .header__btn--fullscreen {
+    display: none;
+  }
+  .header__hamburger-icon {
+    display: block;
+  }
+  .header__btn {
+    font-size: 14px;
+  }
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.menu__item {
+  padding: 0 10px;
+  transition: all 150ms ease-in-out;
+}
+.menu__item:hover {
+  font-weight: 700;
+  /*@include shadow-text;*/
+}
+.menu__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+@media screen and (max-width: 992px) {
+  .menu {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .menu__item {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #e5e5e5;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}/*# sourceMappingURL=style.css.map */
