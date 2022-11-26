@@ -8,6 +8,7 @@
   padding-bottom: $padding-y;
   padding-left: $padding-x;
   padding-right: $padding-x;
+  text-transform:capitalize;
 }
 
 @mixin btn-hover($bg-color, $color, $f-weight) {
