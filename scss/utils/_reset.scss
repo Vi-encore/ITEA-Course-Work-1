@@ -21,6 +21,10 @@ ul li {
   list-style-type: none;
 }
 
+p {
+  margin: $pd-half $pd-0;
+}
+
 .container {
-  padding: $pd-1 $pd-5-pc;
+  padding: $pd-8-pc $pd-5-pc;
 }

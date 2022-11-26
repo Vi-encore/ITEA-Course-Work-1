@@ -8,7 +8,7 @@
   padding-bottom: $padding-y;
   padding-left: $padding-x;
   padding-right: $padding-x;
-  text-transform:capitalize;
+  text-transform: capitalize;
 }
 
 @mixin btn-hover($bg-color, $color, $f-weight) {
@@ -37,4 +37,15 @@
   display: flex;
   align-items: $center;
   justify-content: $between;
+}
+
+@mixin size-100 {
+  width: $w-100;
+  height: $w-100;
+}
+
+@mixin hat-transform {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: $l-20;
 }

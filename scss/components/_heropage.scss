@@ -1,14 +1,163 @@
 .heropage {
- 
+  position: relative;
 
-    &__picture {
-        width: 100%;
-        height: 100%;
+  &__bg {
+    z-index: 1;
+    height: 100%;
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    width: $w-100;
+    height: 99.5%;
+    background: radial-gradient(
+      30.56% 76.04% at 74.58% 0%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  &__picture {
+    @include size-100;
+  }
+
+  &__image {
+    @extend .heropage__picture;
+  }
+
+  &__info {
+    @include size-100;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    color: $white;
+  }
+
+  &__container {
+    @include size-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__posted {
+    @include hat-transform;
+  }
+
+  &__span {
+    font-weight: $f-900;
+  }
+
+  &__header {
+    width: $w-60;
+    font-family: $bold-font;
+    font-weight: $f-700;
+    font-size: $fz-xxl;
+    margin: $pd-half 0;
+  }
+
+  &__author--time {
+    display: flex;
+    flex-direction: row;
+    line-height: $l-28;
+  }
+
+  &__author {
+    padding-right: $pd-10;
+    border-right: 2px $white solid;
+  }
+
+  &__author--span {
+    color: $yellow;
+  }
+
+  &__time {
+    padding-left: $pd-10;
+  }
+
+  &__about {
+    width: $w-50;
+    line-height: $l-28;
+  }
+
+  &__btn {
+    @include btn($fz-standart, $yellow, $primary-color, $pd-1, $pd-2);
+    font-family: $bold-font;
+    font-weight: $f-700;
+    line-height: $l-24;
+    vertical-align: middle;
+    margin-top: $pd-3-pc;
+    width: 200px;
+    @include transition;
+  }
+
+  &__btn::after {
+    content: $right-arrow;
+  }
+
+  &__btn:hover {
+    @include btn-hover($white, $primary-color, $f-700);
+  }
+
+  &__btn:active {
+    background-color: $bg-color;
+  }
+
+  @media screen and (max-width: 1270px) {
+    &__container {
+      padding-top: $pd-5-pc;
+      padding-bottom: $pd-5-pc;
+    }
+  }
+
+  @media screen and (max-width: $xl) {
+    &__posted,
+    &__author--time,
+    &__about {
+      font-size: $fz-xs;
     }
 
-    &__image {
-        width: 100%;
-        height: 100%;
+    &__header {
+      font-size: $fz-xl;
     }
+
+    &__btn {
+      font-size: $fz-s;
+      width: 160px;
+    }
+  }
+
+  @media screen and (max-width: 730px) {
+    &__posted,
+    &__author--time,
+    &__about {
+      font-size: $fz-xxs;
+    }
+
+    &__about {
+      width: $w-75;
+    }
+
+    &__header {
+      font-size: $fz-m;
+      width: $w-75;
+    }
+
+    &__btn {
+      font-size: $fz-xs;
+      width: 140px;
+    }
+  }
+
+  @media screen and (max-width: $s) {
+    &__about,
+    &__header {
+      width: $w-100;
+    }
+
+    &__about {
+      line-height: $l-20;
+    }
+  }
 }
-
