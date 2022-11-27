@@ -315,6 +315,16 @@ p {
     width: 100%;
   }
   .heropage__about {
+    margin: 1em 0;
+  }
+  .heropage__posted, .heropage__author--time, .blog__author--time, .heropage__about {
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .heropage__header {
+    font-size: 56px;
+  }
+  .heropage__about {
     line-height: 20px;
   }
 }

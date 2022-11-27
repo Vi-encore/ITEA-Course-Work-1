@@ -154,6 +154,23 @@
     &__about,
     &__header {
       width: $w-100;
+
+    }
+
+    &__about {
+      margin: $pd-1 $pd-0;
+    }
+
+    &__posted,
+    &__author--time,
+    &__about {
+      font-size: $fz-xs;
+      line-height: $l-32;
+    }
+
+    &__header {
+      font-size: $fz-xxl;
+      
     }
 
     &__about {
