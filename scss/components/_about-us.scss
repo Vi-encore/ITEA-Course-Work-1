@@ -1,0 +1,144 @@
+.about-us {
+  &__top-lines {
+    width: $w-100;
+    height: $pd-20;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  &__line--1 {
+    background-color: $yellow;
+    width: $w-60;
+  }
+
+  &__line--2 {
+    background-color: $purple;
+    width: $w-23;
+  }
+
+  &__info {
+    display: flex;
+    padding: $pd-7-pc;
+    background-color: $lavander;
+  }
+
+  &__main {
+    width: $w-50;
+    padding-right: $pd-5-pc;
+  }
+
+  &__mission {
+    @extend .about-us__main;
+  }
+
+  &__name {
+    @include hat-transform;
+  }
+
+  &__header--main,
+  &__header--mission {
+    font-family: $bold-font;
+    font-weight: $f-700;
+  }
+
+  &__header--main {
+    font-size: $fz-l-pl;
+
+    line-height: $l-48;
+  }
+
+  &__header--mission {
+    font-size: $fz-m-pl;
+    line-height: $l-40;
+  }
+
+  &description,
+  &__link {
+    font-size: $fz-standart;
+  }
+
+  &__description {
+    line-height: $l-28;
+    color: $md-grey;
+    margin-bottom: $pd-2;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: $bold-font;
+    font-weight: $f-700;
+    line-height: $l-32;
+    color: $purple;
+    @include transition;
+  }
+
+  &__link::after {
+    content: $right-arrow;
+  }
+
+  &__link:hover,
+  &__link:active {
+    font-weight: $f-800;
+  }
+
+  @media screen and (max-width: $l) {
+    &__top-lines {
+      height: $pd-10;
+    }
+
+    &__header--main {
+      font-size: $fz-l;
+      line-height: $l-40;
+    }
+
+    &__header--mission {
+      font-size: $fz-m;
+      line-height: $l-32;
+    }
+
+    &__description,
+    &__link {
+      font-size: $fz-s;
+    }
+  }
+
+  @media screen and (max-width: $m) {
+    &__info {
+      flex-direction: column;
+    }
+
+    &__main {
+      width: $w-100;
+      padding: $pd-5-pc $pd-0;
+    }
+
+    &__main--border {
+      border-bottom: 2px $grey-border solid;
+    }
+
+    &__link:hover,
+    &__link:active {
+      font-weight: $f-800;
+    }
+  }
+
+  @media screen and (max-width: $s) {
+    &__description,
+    &__link,
+    &__name {
+      font-size: $fz-xs;
+    }
+
+    &__header--main {
+      font-size: $fz-m-pl;
+      line-height: $l-32;
+    }
+
+    &__header--mission {
+      font-size: $fz-m;
+      line-height: $l-28;
+    }
+  }
+}
