@@ -26,9 +26,11 @@
   &__hamburger-icon {
     display: none;
     flex-direction: column;
+    z-index: 3;
   }
 
   &__menu--mobile {
+    z-index: 1;
     display: none;
     position: absolute;
     width: $w-100;
