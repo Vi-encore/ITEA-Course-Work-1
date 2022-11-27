@@ -39,10 +39,10 @@
         <nav class="header__menu">
           <ul class="menu">
             <li class="menu__item">
-              <a class="menu__link" href="#">Home</a>
+              <a class="menu__link" href="#main">Home</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Blog</a>
+              <a class="menu__link" href="#blog">Blog</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">About us</a>
@@ -62,16 +62,16 @@
         <div class="header__menu--mobile">
           <ul class="menu--mobile">
             <li class="menu__item">
-              <a href="#home" class="menu__link">Home</a>
+              <a href="#main" class="menu__link">Home</a>
             </li>
             <li class="menu__item">
-              <a href="#banner" class="menu__link">Blog</a>
+              <a href="#blog" class="menu__link">Blog</a>
             </li>
             <li class="menu__item">
-              <a href="#about_us" class="menu__link">About us</a>
+              <a href="#" class="menu__link">About us</a>
             </li>
             <li class="menu__item">
-              <a href="#blog" class="menu__link">Contact us</a>
+              <a href="#" class="menu__link">Contact us</a>
             </li>
           </ul>
 
@@ -134,43 +134,43 @@
         <div class="container blog__container">
           <div class="blog__featured">
             <h2 class="blog__header">Featured Post</h2>
-          
-          <div class="blog__card--main">
-            <picture class="blog__picture">
-              <source
-                srcset="img/blog-img-s.png"
-                type="image/png"
-                media="(max-width: 556px)"
-              />
 
-              <source
-                srcset="img/blog-img-m.png"
-                type="image/png"
-                media="(max-width:992px)"
-              />
+            <div class="blog__card--main">
+              <picture class="blog__picture">
+                <source
+                  srcset="img/blog-img-s.png"
+                  type="image/png"
+                  media="(max-width: 556px)"
+                />
 
-              <img
-                class="blog__image"
-                src="img/blog-img.png"
-                alt="White concrete building"
-              />
-            </picture>
-            <div class="blog__author--time">
-              <p class="blog__author">
-                By <span class="blog__author--span">John Doe</span>
+                <source
+                  srcset="img/blog-img-m.png"
+                  type="image/png"
+                  media="(max-width:992px)"
+                />
+
+                <img
+                  class="blog__image"
+                  src="img/blog-img.png"
+                  alt="White concrete building"
+                />
+              </picture>
+              <div class="blog__author--time">
+                <p class="blog__author">
+                  By <span class="blog__author--span">John Doe</span>
+                </p>
+                <p class="blog__time">Aug 23, 2021</p>
+              </div>
+              <h3 class="blog__card--header">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor.
+              </h3>
+              <p class="blog__card--info">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
               </p>
-              <p class="blog__time">Aug 23, 2021</p>
-            </div>
-            <h3 class="blog__card--header">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </h3>
-            <p class="blog__card--info">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident.
-            </p>
-            <a class="blog__btn">read more</a>
+              <a class="blog__btn">read more</a>
             </div>
           </div>
           <div class="blog__posts">
