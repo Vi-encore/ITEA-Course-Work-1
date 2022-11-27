@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: $primary-font, sans-serif;
+  font-family: $primary-font;
   overflow-x: hidden;
   background-color: $white;
   color: $primary-color;
@@ -26,5 +26,5 @@ p {
 }
 
 .container {
-  padding: $pd-8-pc $pd-5-pc;
+  padding: $pd-4-pc $pd-5-pc;
 }

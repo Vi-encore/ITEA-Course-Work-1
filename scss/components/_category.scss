@@ -1,0 +1,71 @@
+.category {
+  &__header {
+    @extend .blog__header;
+    text-align: center;
+  }
+
+  &__cards {
+    @include flex-between;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  &__card {
+    width: $w-23;
+    padding: $pd-2;
+    @include border(1px, $grey-border);
+    @include transition;
+  }
+
+  &__card:hover,
+  &__card:active {
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+
+  &__img {
+    background-color: $light-yellow;
+    border-radius: $pd-10;
+  }
+
+  &__card--header {
+    @extend .about-us__header--mission;
+  }
+
+  &__card--description {
+    @extend .about-us__description;
+    margin-bottom: $pd-half;
+  }
+
+  @media screen and (max-width: $l) {
+    &__cards {
+      flex-wrap: wrap;
+      gap: $pd-3;
+    }
+
+    &__card {
+      width: $w-45;
+    }
+  }
+
+  @media screen and (max-width: $s) {
+    &__cards {
+      justify-content: center;
+    }
+    &__card {
+      width: $w-90;
+      padding: $pd-3;
+    }
+
+    &__card--header {
+      font-size: $fz-m-pl;
+    }
+
+    &__card--description {
+      font-size: $fz-s;
+    }
+  }
+}

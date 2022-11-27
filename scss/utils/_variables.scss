@@ -15,8 +15,8 @@ $lavander: #f4f0f8;
 $white: #ffffff;
 
 /*fonts*/
-$primary-font: "Inter";
-$bold-font: "Sen";
+$primary-font: "Inter", sans-serif;
+$bold-font: "Sen", sans-serif;
 
 /*padding,margin,etc*/
 $pd-0: 0;
@@ -57,10 +57,12 @@ $w-70: 70%;
 $w-60: 60%;
 $w-55: 55%;
 $w-50: 50%;
+$w-45: 45%;
 $w-40: 40%;
 $w-35: 35%;
 $w-30: 30%;
 $w-23: 23%;
+$w-20: 20%;
 $w-25: 25%;
 
 $w--30: 30px;

@@ -40,7 +40,7 @@ p {
 }
 
 .container {
-  padding: 8% 5%;
+  padding: 4% 5%;
 }
 
 /*@mixin shadow {
@@ -221,7 +221,7 @@ p {
 }
 .heropage__header {
   width: 60%;
-  font-family: "Sen";
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   font-size: 56px;
   margin: 0.5em 0;
@@ -256,7 +256,7 @@ p {
   padding-left: 2em;
   padding-right: 2em;
   text-transform: capitalize;
-  font-family: "Sen";
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   line-height: 24px;
   vertical-align: middle;
@@ -335,9 +335,9 @@ p {
   grid-column: 1/3;
   grid-row: 1/2;
 }
-.blog__header {
+.blog__header, .category__header {
   margin-bottom: 1.5em;
-  font-family: "Sen";
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
@@ -369,7 +369,7 @@ p {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
-  font-family: "Sen";
+  font-family: "Sen", sans-serif;
   line-height: 40px;
 }
 .blog__card--info {
@@ -428,7 +428,7 @@ p {
 .blog__card-side--header {
   margin: 0;
   font-size: 24px;
-  font-family: "Sen";
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   line-height: 32px;
 }
@@ -439,7 +439,7 @@ p {
   }
 }
 @media screen and (max-width: 992px) {
-  .blog__header {
+  .blog__header, .category__header {
     font-size: 28px;
   }
   .blog__view-all {
@@ -508,22 +508,22 @@ p {
   letter-spacing: 3px;
   line-height: 20px;
 }
-.about-us__header--main, .about-us__header--mission {
-  font-family: "Sen";
+.about-us__header--main, .about-us__header--mission, .category__card--header {
+  font-family: "Sen", sans-serif;
   font-weight: 700;
 }
 .about-us__header--main {
   font-size: 36px;
   line-height: 48px;
 }
-.about-us__header--mission {
+.about-us__header--mission, .category__card--header {
   font-size: 28px;
   line-height: 40px;
 }
 .about-usdescription, .about-us__link {
   font-size: 18px;
 }
-.about-us__description {
+.about-us__description, .category__card--description {
   line-height: 28px;
   color: #6d6e76;
   margin-bottom: 2em;
@@ -531,7 +531,7 @@ p {
 .about-us__link {
   text-decoration: none;
   text-transform: capitalize;
-  font-family: "Sen";
+  font-family: "Sen", sans-serif;
   font-weight: 700;
   line-height: 32px;
   color: #592ea9;
@@ -551,11 +551,11 @@ p {
     font-size: 32px;
     line-height: 40px;
   }
-  .about-us__header--mission {
+  .about-us__header--mission, .category__card--header {
     font-size: 20px;
     line-height: 32px;
   }
-  .about-us__description, .about-us__link {
+  .about-us__description, .category__card--description, .about-us__link {
     font-size: 16px;
   }
 }
@@ -575,15 +575,69 @@ p {
   }
 }
 @media screen and (max-width: 576px) {
-  .about-us__description, .about-us__link, .about-us__name {
+  .about-us__description, .category__card--description, .about-us__link, .about-us__name {
     font-size: 14px;
   }
   .about-us__header--main {
     font-size: 28px;
     line-height: 32px;
   }
-  .about-us__header--mission {
+  .about-us__header--mission, .category__card--header {
     font-size: 20px;
     line-height: 28px;
+  }
+}
+
+.category__header {
+  text-align: center;
+}
+.category__cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.category__link {
+  text-decoration: none;
+  color: #232536;
+}
+.category__card {
+  width: 23%;
+  padding: 2em;
+  border: 1px solid #d4d4d4;
+  transition: all 150ms ease-in-out;
+}
+.category__card:hover, .category__card:active {
+  background-color: #ffd050;
+  border-color: #ffd050;
+}
+.category__img {
+  background-color: #fbf6ea;
+  border-radius: 10px;
+}
+.category__card--description {
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 992px) {
+  .category__cards {
+    flex-wrap: wrap;
+    gap: 3em;
+  }
+  .category__card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .category__cards {
+    justify-content: center;
+  }
+  .category__card {
+    width: 90%;
+    padding: 3em;
+  }
+  .category__card--header {
+    font-size: 28px;
+  }
+  .category__card--description {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
