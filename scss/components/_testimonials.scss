@@ -1,0 +1,137 @@
+.testimonials {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    background-color: $light-yellow;
+    padding: $pd-5-pc;
+  }
+
+  &__main,
+  &__info {
+    padding: $pd-0 $pd-5-pc;
+  }
+
+  &__main {
+    width: $w-45;
+    border-right: 2px solid $grey-border;
+  }
+
+  &__hat {
+    @extend .about-us__name;
+  }
+
+  &__header {
+    @extend .about-us__header--main;
+  }
+
+  &__description,
+  &__place {
+    @extend .about-us__description;
+  }
+
+  &__place {
+    margin: $pd-0;
+  }
+
+  &__info {
+    width: $w-55;
+    display: flex;
+    flex-direction: column;
+    justify-content: $between;
+  }
+
+  &__about,
+  &__name {
+    @extend .blog__card-side--header;
+  }
+
+  &__person--next {
+    display: flex;
+    flex-direction: row;
+    justify-content: $between;
+    align-items: center;
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: row;
+    justify-content: $between;
+    align-items: center;
+  }
+
+  &__img--person {
+    width: 48px;
+    height: 48px;
+    margin-right: $pd-1;
+  }
+
+  &__next {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 48px;
+    height: 48px;
+    margin: 0 $pd-half;
+    background-color: $white;
+    border-radius: 50%;
+    @include transition;
+  }
+
+  &__img--next {
+    width: 23px;
+    height: 16px;
+    color: $primary-color;
+    @include transition;
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: $primary-color;
+    width: 54px;
+    height: 54px;
+  }
+
+  &__link:hover &__img--next,
+  &__link:active &__img--next {
+    filter: brightness(0) invert(1);
+    width: 30px;
+    height: 20px;
+  }
+
+  @media screen and (max-width: $m) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__main,
+    &__info {
+      width: $w-100;
+      padding: $pd-5-pc;
+    }
+
+    &__main {
+      border-right: 0;
+      border-bottom: 2px solid $grey-border;
+    }
+
+    &__about {
+      padding-bottom: $pd-10-pc;
+    }
+
+    &__person--next {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__person {
+        padding: $pd-8-pc 0;
+    }
+  }
+}

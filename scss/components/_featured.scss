@@ -12,6 +12,7 @@
   &__header {
     @extend .blog__card-side--header;
     color: $md-grey;
+    @include transition;
   }
 
   &__link {
@@ -22,6 +23,7 @@
 
   &__img {
     filter: invert(0.5);
+    @include transition;
   }
 
   &__header:hover,
