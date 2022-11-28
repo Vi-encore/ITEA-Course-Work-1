@@ -426,7 +426,7 @@ p {
 .blog__card--side:hover, .blog__card--side:active {
   background-color: #fbf6ea;
 }
-.blog__card-side--header {
+.blog__card-side--header, .featured__header {
   margin: 0;
   font-size: 24px;
   font-family: "Sen", sans-serif;
@@ -434,7 +434,7 @@ p {
   line-height: 32px;
 }
 @media screen and (max-width: 1115px) {
-  .blog__card-side--header {
+  .blog__card-side--header, .featured__header {
     font-size: 20px;
     line-height: 24px;
   }
@@ -454,7 +454,7 @@ p {
   .blog__author--time {
     font-size: 10px;
   }
-  .blog__card-side--header {
+  .blog__card-side--header, .featured__header {
     font-size: 18px;
     line-height: 20px;
   }
@@ -469,7 +469,7 @@ p {
   .blog__card--side {
     padding: 1em 1em 2em 1em;
   }
-  .blog__card-side--header {
+  .blog__card-side--header, .featured__header {
     font-size: 20px;
     line-height: 28px;
   }
@@ -519,7 +519,7 @@ p {
 .about-usdescription, .about-us__link {
   font-size: 18px;
 }
-.about-us__description, .category__card--description, .authors__description {
+.about-us__description, .category__card--description, .authors__description, .featured__hat {
   line-height: 28px;
   color: #6d6e76;
   margin-bottom: 2em;
@@ -551,7 +551,7 @@ p {
     font-size: 20px;
     line-height: 32px;
   }
-  .about-us__description, .category__card--description, .authors__description, .about-us__link {
+  .about-us__description, .category__card--description, .authors__description, .featured__hat, .about-us__link {
     font-size: 16px;
   }
 }
@@ -571,7 +571,7 @@ p {
   }
 }
 @media screen and (max-width: 576px) {
-  .about-us__description, .category__card--description, .authors__description, .about-us__link, .about-us__name {
+  .about-us__description, .category__card--description, .authors__description, .featured__hat, .about-us__link, .about-us__name {
     font-size: 14px;
   }
   .about-us__header--main {
@@ -610,7 +610,7 @@ p {
   background-color: #fbf6ea;
   border-radius: 10px;
 }
-.category__card--description, .authors__description {
+.category__card--description, .authors__description, .featured__hat {
   margin-bottom: 0.5em;
 }
 @media screen and (max-width: 992px) {
@@ -633,7 +633,7 @@ p {
   .category__card--header, .authors__name {
     font-size: 28px;
   }
-  .category__card--description, .authors__description {
+  .category__card--description, .authors__description, .featured__hat {
     font-size: 16px;
   }
 }
@@ -752,7 +752,7 @@ p {
   height: fit-content;
 }
 .authors__card {
-  height: max-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -768,6 +768,9 @@ p {
   text-align: center;
   width: 60%;
 }
+.authors__description, .featured__hat {
+  font-size: 14px;
+}
 .authors__socials {
   margin: 5px auto;
   filter: brightness(0%);
@@ -779,7 +782,7 @@ p {
   .authors__name {
     width: 70%;
   }
-  .authors__description {
+  .authors__description, .featured__hat {
     font-size: 12px;
   }
 }
@@ -795,5 +798,57 @@ p {
   .authors__name {
     width: 70%;
     font-size: 20px;
+  }
+}
+
+.featured__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.featured__hat {
+  margin: 0;
+}
+.featured__header {
+  color: #6d6e76;
+}
+.featured__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured__img {
+  filter: invert(0.5);
+}
+.featured__header:hover, .featured__header:active {
+  color: #232536;
+}
+.featured__img:hover, .featured__img:active {
+  filter: invert(0);
+}
+@media screen and (max-width: 992px) {
+  .featured__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .featured__info {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .featured__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .featured__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .featured__header {
+    font-size: 28px;
+  }
+  .featured__info, .featured__link {
+    margin: 10px 0;
   }
 }/*# sourceMappingURL=style.css.map */
