@@ -631,7 +631,7 @@ p {
     justify-content: center;
   }
   .category__card {
-    width: 90%;
+    width: 80%;
     padding: 3em;
   }
   .category__card--header {
