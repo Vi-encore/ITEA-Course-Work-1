@@ -604,7 +604,7 @@ p {
 }
 .category__card:hover, .category__card:active {
   background-color: #ffd050;
-  border-color: 0;
+  border: 0;
 }
 .category__img {
   background-color: #fbf6ea;
