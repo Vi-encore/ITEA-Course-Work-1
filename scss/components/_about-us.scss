@@ -33,7 +33,7 @@
   }
 
   &__name {
-    @include hat-transform;
+    @extend .heropage__posted;
   }
 
   &__header--main,

@@ -1,0 +1,157 @@
+.why-start {
+  &__container {
+    position: relative;
+    display: flex;
+    height: fit-content;
+  }
+
+  &__bg {
+    width: fit-content;
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: $w-100;
+  }
+
+  &__img {
+    width: $w-100;
+    height: $w-100;
+  }
+
+  &__info {
+    position: absolute;
+    z-index: 2;
+    bottom: $pd-6-pc;
+    right: $pd-4-pc;
+    background-color: $white;
+    width: $w-65;
+    height: $w-60;
+    padding: $pd-4-pc;
+  }
+
+  &__hat {
+    @extend .heropage__posted;
+  }
+
+  &__header {
+    font-family: $bold-font;
+    font-size: $fz-xxl;
+    line-height: $l-48;
+  }
+
+  &__description {
+    @extend .blog__card--info;
+  }
+
+  &__btn {
+    margin-top: $pd-6-pc;
+  }
+
+  &__link {
+    @extend .blog__btn;
+  }
+
+  @media screen and (max-width: $xl) {
+    &__header {
+      font-size: $fz-xl;
+      line-height: $l-32;
+    }
+  }
+
+  @media screen and (max-width: 1115px) {
+    &__info {
+      height: $w-70;
+      width: $w-70;
+    }
+  }
+
+  @media screen and (max-width: 810px) {
+    &__hat,
+    &__link {
+      font-size: $fz-xs;
+    }
+
+    &__header {
+      font-size: $fz-l;
+      line-height: $l-28;
+    }
+
+    &__description {
+      line-height: $l-24;
+    }
+  }
+
+  @media screen and (max-width: $m) {
+    &__bg {
+      width: $w-100;
+      height: $w-100;
+    }
+
+    &__info {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: $pd-4-pc $pd-5-pc;
+      width: fit-content;
+
+      height: 92%;
+
+      background: radial-gradient(
+        30.56% 76.04% at 74.58% 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+    }
+
+    &__hat {
+      margin-top: $pd-10-pc;
+      
+    }
+
+    &__hat,
+    &__header,
+    &__description {
+      color: $white;
+      width: $w-90;
+    }
+
+    &__link {
+      font-size: $fz-xxs;
+    }
+
+    &__link:hover,
+    &__link:active {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+
+  @media screen and (max-width: $s) {
+    &__hat,
+    &__description,
+    &__header {
+      line-height: $l-20;
+      width: $w-100;
+    }
+
+    &__hat {
+        margin-top: $pd-5-pc;
+    }
+
+    &__hat,
+    &__description {
+      font-size: $fz-xxs;
+    }
+
+    &__header {
+      font-size: $l-24;
+    }
+  }
+
+  @media screen and (msx-width: $xs) {
+    &__header {
+      font-size: $fz-m;
+    }
+  }
+}

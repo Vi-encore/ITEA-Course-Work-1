@@ -211,10 +211,11 @@ p {
   flex-direction: column;
   justify-content: flex-start;
 }
-.heropage__posted {
+.heropage__posted, .why-start__hat, .about-us__name {
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 20px;
+  font-weight: 600;
 }
 .heropage__span {
   font-weight: 900;
@@ -245,7 +246,7 @@ p {
   width: 50%;
   line-height: 28px;
 }
-.heropage__btn, .blog__btn {
+.heropage__btn, .blog__btn, .why-start__link {
   text-decoration: none;
   text-align: center;
   font-size: 18px;
@@ -264,15 +265,15 @@ p {
   width: 200px;
   transition: all 150ms ease-in-out;
 }
-.heropage__btn::after, .blog__btn::after {
+.heropage__btn::after, .blog__btn::after, .why-start__link::after {
   content: " >";
 }
-.heropage__btn:hover, .blog__btn:hover {
+.heropage__btn:hover, .blog__btn:hover, .why-start__link:hover {
   background-color: #ffffff;
   color: #232536;
   font-weight: 700;
 }
-.heropage__btn:active, .blog__btn:active {
+.heropage__btn:active, .blog__btn:active, .why-start__link:active {
   background-color: #e5e5e5;
 }
 @media screen and (max-width: 1270px) {
@@ -282,19 +283,19 @@ p {
   }
 }
 @media screen and (max-width: 1200px) {
-  .heropage__posted, .heropage__author--time, .blog__author--time, .heropage__about {
+  .heropage__posted, .why-start__hat, .about-us__name, .heropage__author--time, .blog__author--time, .heropage__about {
     font-size: 14px;
   }
   .heropage__header {
     font-size: 40px;
   }
-  .heropage__btn, .blog__btn {
+  .heropage__btn, .blog__btn, .why-start__link {
     font-size: 16px;
     width: 160px;
   }
 }
 @media screen and (max-width: 730px) {
-  .heropage__posted, .heropage__author--time, .blog__author--time, .heropage__about {
+  .heropage__posted, .why-start__hat, .about-us__name, .heropage__author--time, .blog__author--time, .heropage__about {
     font-size: 12px;
   }
   .heropage__about {
@@ -304,7 +305,7 @@ p {
     font-size: 20px;
     width: 75%;
   }
-  .heropage__btn, .blog__btn {
+  .heropage__btn, .blog__btn, .why-start__link {
     font-size: 14px;
     width: 140px;
   }
@@ -313,7 +314,7 @@ p {
   .heropage__about, .heropage__header {
     width: 100%;
   }
-  .heropage__posted, .heropage__author--time, .blog__author--time, .heropage__about {
+  .heropage__posted, .why-start__hat, .about-us__name, .heropage__author--time, .blog__author--time, .heropage__about {
     font-size: 14px;
     line-height: 32px;
   }
@@ -372,21 +373,21 @@ p {
   font-family: "Sen", sans-serif;
   line-height: 40px;
 }
-.blog__card--info {
+.blog__card--info, .why-start__description {
   width: 80%;
   margin: 1.5em 0;
   line-height: 28px;
   color: #6d6e76;
 }
-.blog__btn {
+.blog__btn, .why-start__link {
   margin: 0.5em 0;
 }
-.blog__btn:hover {
+.blog__btn:hover, .why-start__link:hover {
   background-color: #232536;
   color: #ffffff;
   font-weight: 700;
 }
-.blog__btn:active {
+.blog__btn:active, .why-start__link:active {
   background-color: #212330;
 }
 .blog__posts {
@@ -474,7 +475,7 @@ p {
   }
 }
 @media screen and (max-width: 576px) {
-  .blog__card--info {
+  .blog__card--info, .why-start__description {
     width: 100%;
   }
 }
@@ -502,11 +503,6 @@ p {
 .about-us__main, .about-us__mission {
   width: 50%;
   padding-right: 5%;
-}
-.about-us__name {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 20px;
 }
 .about-us__header--main, .about-us__header--mission, .category__card--header {
   font-family: "Sen", sans-serif;
@@ -639,5 +635,114 @@ p {
   }
   .category__card--description {
     font-size: 16px;
+  }
+}
+
+.why-start__container {
+  position: relative;
+  display: flex;
+  height: fit-content;
+}
+.why-start__bg {
+  width: fit-content;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.why-start__img {
+  width: 100%;
+  height: 100%;
+}
+.why-start__info {
+  position: absolute;
+  z-index: 2;
+  bottom: 6%;
+  right: 4%;
+  background-color: #ffffff;
+  width: 65%;
+  height: 60%;
+  padding: 4%;
+}
+.why-start__header {
+  font-family: "Sen", sans-serif;
+  font-size: 56px;
+  line-height: 48px;
+}
+.why-start__btn {
+  margin-top: 6%;
+}
+@media screen and (max-width: 1200px) {
+  .why-start__header {
+    font-size: 40px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 1115px) {
+  .why-start__info {
+    height: 70%;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 810px) {
+  .why-start__hat, .why-start__link {
+    font-size: 14px;
+  }
+  .why-start__header {
+    font-size: 32px;
+    line-height: 28px;
+  }
+  .why-start__description {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .why-start__bg {
+    width: 100%;
+    height: 100%;
+  }
+  .why-start__info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 4% 5%;
+    width: fit-content;
+    height: 92%;
+    background: radial-gradient(30.56% 76.04% at 74.58% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  }
+  .why-start__hat {
+    margin-top: 10%;
+  }
+  .why-start__hat, .why-start__header, .why-start__description {
+    color: #ffffff;
+    width: 90%;
+  }
+  .why-start__link {
+    font-size: 12px;
+  }
+  .why-start__link:hover, .why-start__link:active {
+    background-color: #ffffff;
+    color: #232536;
+  }
+}
+@media screen and (max-width: 576px) {
+  .why-start__hat, .why-start__description, .why-start__header {
+    line-height: 20px;
+    width: 100%;
+  }
+  .why-start__hat {
+    margin-top: 5%;
+  }
+  .why-start__hat, .why-start__description {
+    font-size: 12px;
+  }
+  .why-start__header {
+    font-size: 24px;
+  }
+}
+@media screen and (msx-width: 376px) {
+  .why-start__header {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
