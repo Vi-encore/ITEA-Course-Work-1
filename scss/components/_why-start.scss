@@ -106,7 +106,6 @@
 
     &__hat {
       margin-top: $pd-10-pc;
-      
     }
 
     &__hat,
@@ -136,7 +135,7 @@
     }
 
     &__hat {
-        margin-top: $pd-5-pc;
+      margin-top: $pd-5-pc;
     }
 
     &__hat,
@@ -149,7 +148,7 @@
     }
   }
 
-  @media screen and (msx-width: $xs) {
+  @media screen and (max-width: $xs) {
     &__header {
       font-size: $fz-m;
     }
